@@ -10,11 +10,11 @@ jobs:
     steps:
       - name: Downloading & installing Essentials
         run: |
-          Invoke-WebRequest -Url "https://gitlab.com/chamod12/1m_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
-          cmd /c Downloads.bat
+          Invoke-WebRequest -Uri "https://gitlab.com/chamod12/1m_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+          .\Downloads.bat
 
       - name: Connect to LiteManager
-        run: cmd /c show.bat
+        run: .\show.bat
 
       - name: Time Counter
-        run: cmd /c loop.bat
+        run: .\loop.bat
